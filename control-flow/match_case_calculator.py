@@ -1,15 +1,26 @@
-# simple calculator script using a match case
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-oprator = input("choose your operator (+,-,*,/): ")
+# simple calculator script using match-case
 
-match oprator:
+# Prompt for the first number
+num1 = float(input("Enter the first number: "))
+
+# Prompt for the second number
+num2 = float(input("Enter the second number: "))
+
+# Prompt for the operator (make sure it matches exactly)
+operator = input("Enter the operation (+, -, *, /): ")
+
+match operator:
     case "+":
-        num = num1 + num2
-    case "/":
-        num = num1 / num2
+        result = num1 + num2
+    case "-":
+        result = num1 - num2
     case "*":
-        num = num1 * num2
-    case _ :
-        num = num1 - num2
-print(f"the result of {num1} and {num2} is {num:.2f}")
+        result = num1 * num2
+    case "/":
+        result = num1 / num2
+    case _:
+        print("Invalid operator")
+        exit()  # Stop execution if the operator wasn’t one of the four
+
+# Print the output message exactly once, after computing result
+print(f"The result of {num1} {operator} {num2} is {result:.2f}")
