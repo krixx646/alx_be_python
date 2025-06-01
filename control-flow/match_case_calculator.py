@@ -22,5 +22,5 @@ match operation:
         print("Invalid operator")
         exit()
 
-# Print the result exactly once
-print(f"The result of {num1} {operation} {num2} is {result:.2f}")
+# Print starting with “The result is …”
+print(f"The result is {result:.2f}")
