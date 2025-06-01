@@ -1,10 +1,10 @@
-#Pattern printer
-pattern_num = int(input("Enter the size of the pattern: "))
+# pattern_drawing.py
 
-x = 0
-while x < pattern_num:
-    for y in range(pattern_num):
+size = int(input("Enter the size of the pattern: "))
+
+row = 0
+while row < size:
+    for col in range(size):
         print("*", end="")
     print()
-    x = x + 1
-print("Done!")
+    row += 1
