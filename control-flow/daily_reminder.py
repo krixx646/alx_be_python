@@ -1,24 +1,26 @@
-#Priotize task
+# daily_reminder.py
 
-Task = input("Enter the task: ")
-Priority_level = input("Enter the priority level (high/medium/low): ").lower().strip()
-time_bound = input("Enter the time bound (yes/no): ").lower().strip()
+# Prompt for a single task (exact text)
+task = input("Enter your task: ")
+# Prompt for the task’s priority (exact text)
+priority = input("Priority (high/medium/low): ").lower().strip()
+# Prompt for time sensitivity (exact text)
+time_bound = input("Is it time-bound? (yes/no): ").lower().strip()
 
-match Priority_level:
+# Match‐case on priority to set a descriptive prefix
+match priority:
     case "high":
-        level = f"Don't forget this {Task} is important"
+        prefix = "high priority task"
     case "medium":
-        level = f"{Task} is important, but not urgent"
+        prefix = "medium priority task"
     case "low":
-        level = f"{Task} is not so important"
+        prefix = "low priority task"
     case _:
-        level = f"seems you made a mistake here"
+        print("Invalid priority level.")
+        exit()
 
+# Based on time_bound, choose between a “Reminder:” or a “Note:”
 if time_bound == "yes":
-    urgency = f"execute this task immediately"
-elif time_bound == "no":
-    urgency = f"take your time with the task"
+    print(f"Reminder: '{task}' is a {prefix} that requires immediate attention today!")
 else:
-    urgency = f"Do what ever you want"
-
-print(f"{Task} is a {Priority_level} that you need to {urgency}")
+    print(f"Note: '{task}' is a {prefix}. Consider completing it when you have free time.")
