@@ -6,10 +6,10 @@ num1 = float(input("Enter the first number: "))
 # Prompt for the second number
 num2 = float(input("Enter the second number: "))
 
-# Prompt for the operation (exact text the checker wants)
-operator = input("Choose the operation (+, -, *, /): ")
+# Prompt for the operation (must match the checker’s regex)
+operation = input("Choose the operation (+, -, *, /): ")
 
-match operator:
+match operation:
     case "+":
         result = num1 + num2
     case "-":
@@ -22,5 +22,5 @@ match operator:
         print("Invalid operator")
         exit()
 
-# Final print with “The result of … is …” format
-print(f"The result of {num1} {operator} {num2} is {result:.2f}")
+# Print the result exactly once
+print(f"The result of {num1} {operation} {num2} is {result:.2f}")
