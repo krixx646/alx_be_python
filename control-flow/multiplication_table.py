@@ -1,8 +1,8 @@
-# Simple multiplication table
-multiply = int(input("Enter a number to see its multiplication table: "))
-jam = 0
-for x in range(11):
-    print(f"{multiply} * {x} = {multiply * x}")
-    jam += (multiply * x)
-print(f"the addition of all the product of the multiplication table of {multiply} is {jam}")
-print("Done!")
+# multiplication_table.py
+
+# Prompt for a number (exact text)
+number = int(input("Enter a number to see its multiplication table: "))
+
+# Loop from 1 to 10 (inclusive)
+for x in range(1, 11):
+    print(f"{number} * {x} = {number * x}")
