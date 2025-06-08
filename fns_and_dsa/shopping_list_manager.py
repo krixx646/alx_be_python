@@ -1,5 +1,4 @@
 def display_menu():
-    # Required exact header print
     print("Shopping List Manager")
     print("1. Add Item")
     print("2. Remove Item")
@@ -14,7 +13,8 @@ def main():
         choice = input("Enter your choice: ").strip()
 
         if choice == '1':
-            item = input("Enter item to add: ").strip()
+            # Exact required prompt for adding
+            item = input("Enter the item to add: ").strip()
             if item:
                 shopping_list.append(item)
                 print(f"Added: {item}")
@@ -26,7 +26,7 @@ def main():
                 print("Your shopping list is empty. Nothing to remove.")
                 continue
 
-            item = input("Enter item to remove: ").strip()
+            item = input("Enter the item to remove: ").strip()
             if item in shopping_list:
                 shopping_list.remove(item)
                 print(f"Removed: {item}")
