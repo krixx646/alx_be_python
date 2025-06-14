@@ -1,5 +1,3 @@
-# try and catch error handling
-
 def safe_divide(numerator, denominator):
     try:
         x = float(numerator)
@@ -12,7 +10,8 @@ def safe_divide(numerator, denominator):
     except ZeroDivisionError:
         print("Error: Cannot divide by zero.")
         return
-    return j
+    # Print the result in the required format
+    print(f"The result of the division is {j}")
 
 
 
