@@ -4,7 +4,7 @@ def safe_divide(numerator, denominator):
     try:
        x = float(numerator)
        y = float(denominator)
-    except Exception as e:
+    except (TypeError, ValueError) as e:
         print(f'one or both of the input is not a float or not decimal', e)
         return
     try:
