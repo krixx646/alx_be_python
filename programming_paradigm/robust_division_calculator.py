@@ -9,8 +9,9 @@ def safe_divide(numerator, denominator):
         return
     try:
         j = x / y
-    except ZeroDivisionError as e:
-        print(f"{e}, we have talked about this, use your brain")
+    except ZeroDivisionError:
+        # Exactly match the required message:
+        print("Error: Cannot divide by zero.")
         return
     return j
 
